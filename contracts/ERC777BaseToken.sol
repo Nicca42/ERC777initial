@@ -1,7 +1,7 @@
 /* This Source Code Form is subject to the terms of the Mozilla Public
 * License, v. 2.0. If a copy of the MPL was not distributed with this
 * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
-pragma solidity 0.4.21;
+pragma solidity 0.4.24;
 
 import { ERC820Implementer } from "eip820/contracts/ERC820Implementer.sol";
 import { SafeMath } from "openzeppelin-solidity/contracts/math/SafeMath.sol";
@@ -32,7 +32,7 @@ contract ERC777BaseToken is ERC777Token, ERC820Implementer {
     /// @param _name Name of the new token
     /// @param _symbol Symbol of the new token.
     /// @param _granularity Minimum transferable chunk.
-    function ERC777BaseToken(string _name, string _symbol, uint256 _granularity, address[] _defaultOperators) internal {
+    constructor(string _name, string _symbol, uint256 _granularity, address[] _defaultOperators) internal {
         mName = _name;
         mSymbol = _symbol;
         mTotalSupply = 0;

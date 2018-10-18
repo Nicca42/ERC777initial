@@ -1,7 +1,7 @@
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
-pragma solidity 0.4.21;
+pragma solidity 0.4.24;
 
 
 import { ERC20Token } from "./ERC20Token.sol";
@@ -14,7 +14,7 @@ contract ERC777ERC20BaseToken is ERC20Token, ERC777BaseToken {
     mapping(address => mapping(address => bool)) internal mAuthorized;
     mapping(address => mapping(address => uint256)) internal mAllowed;
 
-    function ERC777ERC20BaseToken(
+    constructor(
         string _name,
         string _symbol,
         uint256 _granularity,
